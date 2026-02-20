@@ -16,9 +16,14 @@
 #         print(f"{no}.{x}-{is_prime(x)}")
 
 #Final code
-def prime(num):
+def is_prime(num):
+    if num < 2:
+        return False
     for x in range(2,num):
+        print("loop")
         if num % x == 0:
             return False
     return True
+
+print(is_prime(1))
 
