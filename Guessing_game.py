@@ -32,7 +32,37 @@ while attempt != 0 and is_guessing:
     user_is_guessing = int(input("Make a guess: "))
     is_guessing_check(user_is_guessing,computer_choice)
     if attempt == 0:
-        print("You've run out of guesses. Refresh the page to run again.")
+        print(f"You've run out of guesses. Refresh the page to run again.The answer was {computer_choice}")
     else:
         print(f"Guess Again")
         print(f"You have {attempt} attempts remaining to guess the number.")
+
+# code below written by Gemini 3 this is super good
+# import random
+
+# def play_game():
+#     print("Welcome to the Number Guessing Game!")
+#     number = random.randint(1, 100)
+    
+#     # Setting difficulty
+#     level = input("Choose 'easy' or 'hard': ").lower()
+#     attempts = 10 if level == "easy" else 5
+
+#     while attempts > 0:
+#         print(f"You have {attempts} attempts left.")
+#         try:
+#             guess = int(input("Make a guess: "))
+#         except ValueError:
+#             print("Please enter a valid number.")
+#             continue
+
+#         if guess == number:
+#             print(f"You got it! The answer was {number}.")
+#             return # Ends the function/game
+        
+#         print("Too high" if guess > number else "Too low")
+#         attempts -= 1
+
+#     print(f"Game over! The number was {number}.")
+
+# play_game()
